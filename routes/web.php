@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\controladorEjercicio1;
+use App\Http\Controllers\ControladorEjercicio1;
+use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ej1', [controladorEjercicio1::class, 'ej1Parametro']);
+Route::get('/ej1/{nombre1}/{nombre2}/{nombre3}/{nombre4}', [ControladorEjercicio1::class, 'ej1Parametro']);
